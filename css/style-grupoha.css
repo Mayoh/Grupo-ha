@@ -1,0 +1,1191 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background:url(../imgs/textura.png) repeat #f3f3f3;
+	font-family: 'Cambay', sans-serif;
+	font-weight:400;
+	color:#595a5c !important;}
+	
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Federo', sans-serif !important;
+	color:#000066 !important;}
+	
+b {font-family: 'Cambay', sans-serif;
+	font-weight:700;}
+	
+p {font-family: 'Cambay', sans-serif;
+	font-weight:400;}
+
+a {color:#000066 !important;
+	text-decoration:none;
+	font-family: 'Cambay', sans-serif;
+	font-weight:400;}
+
+a:hover {
+	text-decoration:none !important;}
+	
+ul li {
+	list-style-type:square;
+	font-family: 'Cambay', sans-serif;
+	font-weight:400;}
+
+.body-ha {
+	background:#FFF;
+	box-shadow: 0 0 8px 5px #999;}
+	
+.bloques {
+	margin-top:25px !important;
+	margin-bottom:25px !important;}
+	
+.texto-ha {
+	background:#f3f3f3;
+	background-origin:border-box;
+	padding: 10px 20px !important;
+	
+}
+
+.texto2-ha {
+	padding-top:4.5em;}
+	
+.texto3-ha {
+	background:rgba(23,18,67,.6);
+	background-origin:border-box;
+	color:#FFF;
+	padding: 10px 20px !important;}
+	
+.text3-titulos {
+	color:#FFF !important;
+	width:60%;
+	border-bottom: 1px solid #FFF !important;
+	margin-bottom:25px;}
+	
+.text3-subtitulos {color:#FFF !important;}
+
+.titulos-ha {
+	width:60%;
+	border-bottom: 1px solid #000066 !important;
+	margin-top:10px !important;
+	padding-bottom:10px;}
+	
+.titulos2-ha {
+	border-bottom: 1px solid #000066 !important;
+	margin-top:10px !important;
+	padding-bottom:10px;}
+	
+.subtitulos-ha {color:#000066 !important;}
+	
+#top-head {
+	margin-top:50px;}
+	
+#logo-head {
+	width:100%;}
+	
+.grupoha-button {
+	background:#FFF;
+	border:1px solid #b4b4b4;
+	padding:5px;
+	color:#000066 !important;
+	width:111px;
+	height:31px;
+	margin-bottom:15px;}
+	
+.grupoha-button2 {
+	background:#FFF;
+	border:1px solid #b4b4b4;
+	padding:5px;
+	color:#000066 !important;
+	width:170px;
+	height:31px;
+	margin-bottom:15px;}
+	
+.texto-contacto {
+	color:#000066 !important;}
+	
+	
+	/*buscador*/
+
+
+#searchbox
+{
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+	font-family: 'Federo', sans-serif;
+	float:left;
+}
+
+#search, 
+#submit {
+    float: left;
+}
+
+#search {
+    height: 30px;
+    width: 220px;
+    border: 1px solid #b4b4b4 ; 
+	color:#000066 !important;
+	padding-left:5px;   
+}
+
+
+#submit
+{
+	width:30px;
+	height:30px;
+	background:url(../imgs/search.png) no-repeat center;
+	border-radius:50%;
+	border:none;
+    margin: 0 0 0 10px;
+    padding: 0;
+    cursor: pointer;   
+}
+
+#submit:hover {
+	background:url(../imgs/search-hover.png) no-repeat center;   
+
+}   
+
+#search placeholder {
+   color:#000066 !important;
+}
+
+/*Menu principal*/
+
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  width: auto;
+  line-height: 1;
+  	background: rgba(226,226,226,1);
+background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 44%, rgba(219,219,219,1) 75%, rgba(209,209,209,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(44%, rgba(254,254,254,1)), color-stop(75%, rgba(219,219,219,1)), color-stop(100%, rgba(209,209,209,1)));
+background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 44%, rgba(219,219,219,1) 75%, rgba(209,209,209,1) 100%);
+background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 44%, rgba(219,219,219,1) 75%, rgba(209,209,209,1) 100%);
+background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 44%, rgba(219,219,219,1) 75%, rgba(209,209,209,1) 100%);
+background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 44%, rgba(219,219,219,1) 75%, rgba(209,209,209,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#d1d1d1', GradientType=0 );
+-webkit-box-shadow: 4px 4px 4px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    4px 4px 4px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         4px 4px 4px 0px rgba(50, 50, 50, 0.75);
+z-index:200;
+}
+
+#cssmenu > ul > li {
+  float: left;
+  border-right:1px solid #171243;
+  width:25%;
+}
+
+#cssmenu > ul > li:last-child {
+	border-right:none;}
+
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu.align-right ul ul {
+  text-align: right;
+}
+#cssmenu > ul > li > a {
+  padding: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #171243;
+  text-align:center;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li.active > a {
+	text-decoration:underline;
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 25px;
+}
+
+#cssmenu > ul > li.has-sub > a::after {
+  position: absolute;
+  top: 21px;
+  right: 10px;
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid #171243;
+  border-right: 1px solid #171243;
+  content: "";
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: border-color 0.2s ease;
+  -moz-transition: border-color 0.2s ease;
+  -ms-transition: border-color 0.2s ease;
+  -o-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+#cssmenu > ul > li.has-sub:hover > a::after {
+  border-color: #171243;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#cssmenu li:hover > ul {
+  left: auto;
+}
+#cssmenu.align-right li:hover > ul {
+  right: 0;
+}
+#cssmenu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#cssmenu.align-right ul ul ul {
+  margin-left: 0;
+  margin-right: 100%;
+}
+#cssmenu ul ul li {
+  height: 0;
+  -webkit-transition: height .2s ease;
+  -moz-transition: height .2s ease;
+  -ms-transition: height .2s ease;
+  -o-transition: height .2s ease;
+  transition: height .2s ease;
+}
+#cssmenu ul li:hover > ul > li {
+  height: 32px;
+}
+#cssmenu ul ul li a {
+  padding: 10px 20px;
+  width: 160px;
+  font-size: 13px;
+  background: #171243;
+  text-decoration: none;
+  color: #fff !important;
+  -webkit-transition: color .2s ease;
+  -moz-transition: color .2s ease;
+  -ms-transition: color .2s ease;
+  -o-transition: color .2s ease;
+  transition: color .2s ease;
+}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {
+  color: #ffffff;
+}
+#cssmenu ul ul li.has-sub > a::after {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 4px;
+  height: 4px;
+  border-bottom: 1px solid #171243;
+  border-right: 1px solid #171243;
+  content: "";
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: border-color 0.2s ease;
+  -moz-transition: border-color 0.2s ease;
+  -ms-transition: border-color 0.2s ease;
+  -o-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+#cssmenu.align-right ul ul li.has-sub > a::after {
+  right: auto;
+  left: 10px;
+  border-bottom: 0;
+  border-right: 0;
+  border-top: 1px solid #171243;
+  border-left: 1px solid #171243;
+}
+#cssmenu ul ul li.has-sub:hover > a::after {
+  border-color: #171243;
+}
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    width: 100%;
+  }
+  #cssmenu ul {
+    width: 100%;
+    display: none;
+  }
+  #cssmenu.align-center > ul,
+  #cssmenu.align-right ul ul {
+    text-align: left;
+  }
+  #cssmenu ul li,
+  #cssmenu ul ul li,
+  #cssmenu ul li:hover > ul > li {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid rgba(23, 18, 67, 0.7);
+  }
+  #cssmenu ul li a,
+  #cssmenu ul ul li a {
+    width: 100%;
+	text-align:left;
+  }
+  #cssmenu > ul > li,
+  #cssmenu.align-center > ul > li,
+  #cssmenu.align-right > ul > li {
+    float: none;
+    display: block;
+  }
+  #cssmenu ul ul li a {
+    padding: 20px 20px 20px 30px;
+    font-size: 12px;
+    color: #171243;
+    background: none;
+  }
+  #cssmenu ul ul li:hover > a,
+  #cssmenu ul ul li a:hover {
+    color: #171243;
+  }
+  #cssmenu ul ul ul li a {
+    padding-left: 40px;
+  }
+  #cssmenu ul ul,
+  #cssmenu ul ul ul {
+    position: relative;
+    left: 0;
+    right: auto;
+    width: 100%;
+    margin: 0;
+  }
+  #cssmenu > ul > li.has-sub > a::after,
+  #cssmenu ul ul li.has-sub > a::after {
+    display: none;
+  }
+  #menu-line {
+    display: none;
+  }
+  #cssmenu #menu-button {
+    display: block;
+    padding: 20px;
+    color: #171243;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  #cssmenu #menu-button::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #171243;
+  }
+  #cssmenu #menu-button::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    display: block;
+    width: 15px;
+    height: 3px;
+    border-top: 2px solid #171243;
+    border-bottom: 2px solid #171243;
+  }
+  #cssmenu .submenu-button {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    display: block;
+    border-left: 1px solid rgba(23, 18, 67, 0.7);
+    height: 52px;
+    width: 52px;
+    cursor: pointer;
+  }
+  #cssmenu .submenu-button::after {
+    content: '';
+    position: absolute;
+    top: 21px;
+    left: 26px;
+    display: block;
+    width: 1px;
+    height: 11px;
+    background: #171243;
+    z-index: 99;
+  }
+  #cssmenu .submenu-button::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: 26px;
+    display: block;
+    width: 11px;
+    height: 1px;
+    background: #171243;
+    z-index: 99;
+  }
+  #cssmenu .submenu-button.submenu-opened:after {
+    display: none;
+  }
+}
+
+
+/*Menu-Footer*/
+
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Windows Chrome ugly fix http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'icomoon';
+		src: url('../fonts/icomoon.svg#icomoon') format('svg');
+	};
+}
+
+.icon-menu {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+.icon-menu:before {
+	content: "\f0c9";
+}
+
+a, li {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Global CSS that are applied for all screen sizes */
+
+
+.nav ul {
+	max-width: 1240px;
+	padding: 0;
+	list-style: none;
+	-webkit-box-shadow: 3px 3px 5px rgba(50,50,50,.7);
+   -moz-box-shadow: 3px 3px 5px rgba(50,50,50,.7);
+   box-shadow: 3px 3px 5px rgba(50,50,50,.7);
+}
+
+.nav ul li {
+	list-style:none;
+	padding-bottom:10px;}
+
+
+.nav a {
+	display: block;
+	color: #fff !important;
+	text-decoration:underline;
+}
+
+
+a, button {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Hover effect for the whole navigation to make the hovered item stand out */
+
+.no-touch .nav ul:hover a {
+	color: #171243;
+}
+
+.no-touch .nav ul:hover a:hover {
+	color: #171243;
+}
+
+/* Adding some background color to the different menu items */
+
+.nav li {
+	background:#171243;
+   border-right:1px solid #fff;
+   border-bottom:1px solid #fff;
+   margin-bottom:10px;
+}
+
+.nav li:last-child {
+	border-right:none;}
+
+
+/* For screen bigger than 800px */
+@media (min-width: 50em) {
+
+	/* Transforms the list into a horizontal navigation */
+	
+
+	.nav li {
+		float: left;
+		width: 25%;
+		text-align: center;
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
+	}
+
+	.nav a {
+		display: block;
+		width: auto;
+	}
+
+	/* hover, focused and active effects that add a little colored border to the different items */
+	.no-touch .nav li a:hover,
+	.no-touch .nav li a:active,
+	.no-touch .nav li a:focus {
+		text-decoration:underline;
+	}
+
+
+	/* Placing the icon */
+	
+	.icon {
+		padding-top: 1.4em;
+	}
+
+
+	/* Animating the height of the element*/
+	.nav a {
+		height: 3em;
+		padding:10px 0;
+		padding-top: 15px;
+	}
+
+	.no-touch .nav a:hover ,
+	.nav a:active ,
+	.nav a:focus {
+		height: 3em;
+		padding:10px 0;
+		padding-top: 15px;
+		text-decoration:underline;
+	}	
+
+
+		
+}
+
+@media (min-width: 50em) and (max-width: 61.250em) {
+	
+		.no-touch .nav a:hover ,
+	.nav a:active ,
+	.nav a:focus {
+		text-decoration:underline;
+	}	
+
+	
+
+}
+
+/* The "tablet" and "mobile" version */
+
+@media (max-width: 49.938em) {		
+	
+	/* Instead of adding a border, we transition the background color */
+	.no-touch .nav ul li a:hover,
+	.no-touch .nav ul li a:active,
+	.no-touch .nav ul li a:focus {
+		text-decoration:underline;
+	}
+	
+	.nav li {
+		border:1px solid #fff;
+ }
+		
+		
+	.nav li:last-child {
+		border-right:1px solid #fff;}
+
+
+
+}
+
+/* CSS specific to the 2x3 columns version */
+@media (min-width:32.5em) and (max-width: 49.938em) {
+
+	.nav li {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+	
+	/* Adding some padding to make the elements look nicer*/
+	.nav a {
+		padding: 0.8em;		
+	}
+
+	/* Displaying the icons on the left, and the text on the right side using inlin-block*/
+
+	
+	.no-touch .nav ul li a:hover,
+	.no-touch .nav ul li a:active,
+	.no-touch .nav ul li a:focus {
+		text-decoration:underline;
+	}
+
+
+	
+}
+
+/* Adapting the font size and width for smaller screns*/
+@media (min-width: 32.5em) and (max-width: 38.688em) {
+
+
+}
+
+/* Styling the toggle menu link and hiding it */
+.nav .navtoogle{
+	display: none;	
+	width: 100%;
+	padding: 0.5em 0.5em 0.8em;
+	font-weight: normal;
+	text-align: left;
+	color: #fff;
+	font-size: 1em;	
+	background:none;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.navtoogle i{
+	z-index:-1;
+}
+
+.icon-menu {
+	position: relative;
+	top: 3px;
+	line-height: 0;
+	font-size: 1.6em;
+}
+
+@media (max-width: 32.438em) {
+
+	/* Unhiding the styled menu link */
+
+
+
+	.nav .navtoogle{
+		margin: 0;
+		display: block;
+	}
+
+	.no-touch .nav ul li a:hover,
+	.no-touch .nav ul li a:active,
+	.no-touch .nav ul li a:focus {
+		text-decoration:underline;
+	}
+	
+	/* When JavaScript is disabled, we hide the menu */
+	.no-js .nav ul {
+		max-height: 30em;
+		overflow: hidden;
+	}
+	
+	/* When JavaScript is enabled, we hide the menu */
+	.js .nav ul {
+		max-height: 0em;
+		overflow: hidden;
+	}
+	
+	/* Displaying the menu when the user has clicked on the button*/
+	.js .nav .active + ul {		
+		max-height: 30em;
+		overflow: hidden;
+		-webkit-transition: max-height .4s;
+		-moz-transition: max-height .4s;
+		-o-transition: max-height .4s;
+		-ms-transition: max-height .4s;
+		transition: max-height .4s;
+	}
+
+	/* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
+
+
+	.nav a {
+		padding: 0.5em;		
+	}
+
+	
+	/* Adding a left border of 2 px with a different color for each menu item*/
+	.nav li {
+		border-left: 2px solid #fff;
+	}
+
+
+	/* make the nav bigger on touch screens */
+	.touch .nav a {
+		padding: 0.8em;
+	}
+}
+
+
+/*Slider*/
+
+
+
+#ninja-slider {
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+
+#ninja-slider .fs-icon {
+    top:6px;
+    right:6px;
+    width:60px;
+    height:26px;
+    z-index:2;
+    color:white;
+    text-align:center;
+    opacity:0;
+    -webkit-transition:opacity 0.8s;
+    transition:opacity 0.8s;
+}
+
+#ninja-slider .slider-inner:hover .fs-icon,
+#ninja-slider.fullscreen .fs-icon {
+    opacity: 1;
+}
+
+
+
+#ninja-slider .slider-inner {
+    margin:0 auto;/*center-aligned */
+    font-size:0px;
+    position:relative;
+    box-sizing:border-box;
+}
+
+#ninja-slider.fullscreen .slider-inner {
+    width:95%;
+    max-width:900px;
+}
+
+#ninja-slider ul {
+    position:relative;
+    list-style:none;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#ninja-slider li {
+    
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    opacity:0;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+
+#ninja-slider li.ns-show {
+    opacity:1;
+}
+
+
+
+/* --------- slider image ------- */  
+#ninja-slider .ns-img {
+    background-color:rgba(0,0,0,0.3);
+    background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/
+    cursor:default;
+    display:block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+/* ---------Arrow buttons ------- */   
+/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */ 
+#ninja-slider-pause-play { display:none;}  
+
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display:inline-block;
+    width:42px;
+    height:56px;
+    line-height:56px;
+    top: 50%;
+    margin-top:-51px;/*pager's height should also be counted*/
+    background-color:rgba(23,18,67,0.7);
+    background-color:#171243\9;/*IE8 hack*/
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    border-radius:2px;
+    z-index:10;
+    opacity:0.3; 
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.7s;
+}
+
+.slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
+    opacity:1;
+}
+
+
+#ninja-slider-prev {
+    left: 0px; 
+}
+#ninja-slider-next {
+    right: 0px;
+}
+
+/* arrows */
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    backface-visibility:hidden;
+}
+
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    right:4px;
+}
+
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    left:4px;
+}
+
+
+/*pagination num within the arrow buttons*/
+#ninja-slider-prev div, #ninja-slider-next div {display:none;}
+
+
+/*------ pager(nav bullets) ------*/      
+/* The pager id should be: slider id + "-pager" */
+/* #ninja-slider-pager { display:none;}*/
+#ninja-slider-pager
+{
+    padding-top:10px; /* set the distance away from the slider */
+    margin:0 auto; /* center align */
+    text-align:center;
+    display:table;
+    font-size:0;
+}
+         
+#ninja-slider-pager a 
+{
+    display:inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #CCC;
+    font-size:0; /* Non-zero will show the index num */
+    margin:2px 6px;
+    cursor:pointer;
+    border-radius:10px;
+    box-shadow:inset 0 1px 3px #666666;
+}
+
+#ninja-slider-pager a:hover 
+{
+    opacity:0.6;
+}
+#ninja-slider-pager a.active 
+{
+    background-color:#171243;
+}
+
+   
+
+#ninja-slider-pager, #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+/*Responsive settings*/
+@media only screen and (max-width:600px){
+
+    #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pager {
+        display:none;
+    }
+
+    
+    #ninja-slider li .cap1 {
+        font-size:20px;
+    }
+	
+	.text-left {
+  text-align:center !important;
+}
+.text-right {
+  text-align:center !important;
+}
+
+.aviso {
+	border-right:none !important;}
+	
+.menu-head {
+	margin-top:0px !important;
+	margin-bottom:0px !important;}
+}
+
+
+
+
+/*Servicios cuadricula*/
+
+.servicios {
+	display: inline-block;
+	width: 220px;
+	margin: 0;
+	text-align: left;
+	position: relative;
+}
+
+.servicio-abstract {
+	  background: rgba(23,18,67,.6);
+	  background-origin: border-box;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  color:#fff !important;}
+	
+.titulo-servicio {
+	font-size:1.6em;
+	font-family: 'Federo', sans-serif !important;
+	background:none;}
+	
+	  
+.abstract {
+	  font-size: 12px;
+	  padding: 15px;
+	  margin:0;}
+
+.servicio-abstract :hover {
+	  background:rgba(255,255,255,.6);
+	  background-origin: border-box;
+	  height:100%;
+	  color: #000066 !important;
+	  }
+.titulo-servicio :hover { background:none !important;}
+
+/*asociados*/
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	border-top:none !important;}
+
+.grises img {
+filter: url('#grayscale');
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: Gray();
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+display:block;
+margin-left: auto;
+margin-right: auto;
+}
+.grises img:hover { 
+-webkit-filter: grayscale(0%);
+-moz-filter: grayscale(0%);
+-ms-filter: grayscale(0%);
+-o-filter: grayscale(0%);
+filter: none;
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+transition: all 0.5s ease;
+display:block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.clientes-img {
+	width:100%}
+	
+/*Contacto*/
+
+.formulario {
+	background:rgba(23,18,67,.6);
+	padding:3em;
+	}
+
+.campos {
+	width:100%;
+	height:40px;
+	padding-left:8px;
+	border: 1px solid rgba(23,18,67,.6) !important;
+	color:#000066 !important;}
+	
+.mensaje {
+	width:100%;
+	height:140px;
+	padding-left:8px;
+	border: 1px solid rgba(23,18,67,.6) !important;
+	color:#000066 !important;}
+	
+input[placeholder], [placeholder], *[placeholder] {
+    color: #000066 !important;
+}
+
+.boton-contacto {
+	background:rgba(23,18,67,.1);
+	border: 1px solid #fff !important;
+	color:#fff !important;
+	width:100%;
+	height:40px;}
+	
+/*RS*/
+
+ul#iconos2 {
+list-style: none;
+float: left;
+width:100px;
+height:24px;
+padding-left:0px;
+}
+
+#iconos2 li {
+	 float: left !important;
+    list-style: none;
+    width: 30px;}
+
+#iconos2 li a{
+width: 24px;
+height: 24px;
+background:url(../imgs/rs-grupoha.png) no-repeat;
+display: block;
+margin:5px;
+margin-left:0px;
+}
+#iconos2 li#facebook a{
+background-position: 0 0;
+}
+#iconos2 li#twitter a {
+background-position: -24px 0;
+}
+#iconos2 li#facebook a:hover{
+background-position: 0 -24px;
+}
+#iconos2 li#twitter a:hover {
+background-position: -24px -24px;
+}
+
+.rs-head {
+	width:60px !important;
+	margin-top:8px;}
+
+/*footer*/
+	
+.grupoha-footer {
+	height:100%;
+	background:#171243;
+	color:#fff !important;
+	font-size:11px;}
+	
+.footer {
+	margin-top:10px !important;}
+	
+.aviso {
+	border-right:1px solid #fff;}
+	
+.aviso a {
+	color:#fff !important;}
+	
+#aviso-privacidad {
+	text-decoration:underline;}
+	
+.text-left {
+	margin-bottom:1px;}
+
+

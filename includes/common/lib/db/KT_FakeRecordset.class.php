@@ -123,7 +123,7 @@ class KT_FakeRecordset {
 			$create_sql .= $key . ' TEXT, ';
 			$insert_sql .= $key . ', ';
 			if (!is_array($value)) {
-				$insert_values .= "'" . mysql_real_escape_string($value) . "', ";
+				$insert_values .= "'" . mysql_escape_string($value) . "', ";
 			} else {
 				$multiple = true;
 			}
@@ -139,7 +139,7 @@ class KT_FakeRecordset {
 					if (!isset($multiple_values[$i])) {
 						$multiple_values[$i] = '';
 					}
-					$multiple_values[$i] .= "'" . mysql_real_escape_string($value) . "', ";
+					$multiple_values[$i] .= "'" . mysql_escape_string($value) . "', ";
 					$i++;
 				}
 			}
@@ -206,7 +206,7 @@ class KT_FakeRecordset {
 			}
 			$select_sql .= 'SELECT ';
 			foreach ($row as $colName => $value) {
-				$select_sql .=  "'" . mysql_real_escape_string($value) . "' AS " . $colName . ", ";
+				$select_sql .=  "'" . mysql_escape_string($value) . "' AS " . $colName . ", ";
 			}
 			$select_sql = substr(trim($select_sql), 0, -1);
 		}

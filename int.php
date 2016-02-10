@@ -31,11 +31,15 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
+$colname_pag = "-1";
+if (isset($_GET['mod'])) {
+  $colname_pag = $_GET['mod'];
+}
 mysql_select_db($database_ha, $ha);
-$query_banners = "SELECT * FROM banner";
-$banners = mysql_query($query_banners, $ha) or die(mysql_error());
-$row_banners = mysql_fetch_assoc($banners);
-$totalRows_banners = mysql_num_rows($banners);
+$query_pag = sprintf("SELECT contenido FROM paginas WHERE pag = %s", GetSQLValueString($colname_pag, "text"));
+$pag = mysql_query($query_pag, $ha) or die(mysql_error());
+$row_pag = mysql_fetch_assoc($pag);
+$totalRows_pag = mysql_num_rows($pag);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -45,27 +49,9 @@ $totalRows_banners = mysql_num_rows($banners);
 </head>
 
 <body>
-<!--            Banners-->
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10 bloques">
-
-        <div class="col-md-12">
-            <div id="ninja-slider">
-                <div class="slider-inner">
-                    <ul>
-                        <li><img class="ns-img" src="imgs/<?php echo $row_banners['banner']; ?>" /></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="col-md-1"></div>
-</div>
-<!--                Fin banners-->
+<?php echo $row_pag['contenido']; ?>
 </body>
 </html>
 <?php
-mysql_free_result($banners);
+mysql_free_result($pag);
 ?>

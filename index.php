@@ -1,10 +1,59 @@
+<?php require_once('Connections/ha.php'); ?>
+<?php
+// Require the MXI classes
+require_once ('includes/mxi/MXI.php');
+
+// Make unified connection variable
+$conn_ha = new KT_connection($ha, $database_ha);
+
+if (!function_exists("GetSQLValueString")) {
+    function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+    {
+        if (PHP_VERSION < 6) {
+            $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+        }
+
+        $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+        switch ($theType) {
+            case "text":
+                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+                break;    
+            case "long":
+            case "int":
+                $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+                break;
+            case "double":
+                $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+                break;
+            case "date":
+                $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+                break;
+            case "defined":
+                $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+                break;
+        }
+        return $theValue;
+    }
+}
+
+// Include Multiple Dynamic Pages
+$mxiObj = new MXI_Includes("mod");
+$mxiObj->IncludeDynamic($conn_ha, "paginas", "pag", "base", "", "", "");
+
+mysql_select_db($database_ha, $ha);
+$query_menu = "SELECT * FROM categorias";
+$menu = mysql_query($query_menu, $ha) or die(mysql_error());
+$row_menu = mysql_fetch_assoc($menu);
+$totalRows_menu = mysql_num_rows($menu);
+?>
 <!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Grupo Ha´</title>
+        <title>Grupo Ha´</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
@@ -12,16 +61,15 @@
         <meta name="description" content="Ofrece un portafolio de servicios especializados en temas del agua para tomar mejores decisiones, basadas en el conocimiento científico para enfrentar la problemática actual del agua en nuestro país." />
         <meta name="keywords" content="grupoha, agua, servicios especializados en agua, conocimientos científicos, grupo especialistas,modelo de geobases," />
         <meta name="author" content="Plastik 2016" />
-
         <link type="text/css" rel="stylesheet" href="css/style-grupoha.css"/>
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
         <link href='https://fonts.googleapis.com/css?family=Federo' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Cambay:400,700' rel='stylesheet' type='text/css'>
-
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="js/script.js"></script>
         <script src="js/modernizr.custom.js"></script>
         <script src="js/ninja-slider.js"></script>
+        <base href="<?php echo mxi_getBaseURL(); ?>" />
     </head>
 
     <body>
@@ -63,16 +111,33 @@
                         <div class="col-md-12">
                             <div id='cssmenu'>
                                 <ul>
-                                    <li><a href='#'>Inicio</a></li>
-                                    <li><a href='#'>Servicios</a></li>
-                                    <li class='active has-sub'><a href='#'>Enlaces comerciales</a>
+                                    <!--Menu-->
+                                    <?php do { 
+    $cat=$row_menu['id_cat'];
+    mysql_select_db($database_ha, $ha);
+    $query_subcategorias = "SELECT * FROM subcategorias WHERE id_cat = $cat AND id_cat != 2";
+    $subcategorias = mysql_query($query_subcategorias, $ha) or die(mysql_error());
+    $row_subcategorias = mysql_fetch_assoc($subcategorias);
+    $totalRows_subcategorias = mysql_num_rows($subcategorias);
+
+    mysql_select_db($database_ha, $ha);
+    $query_ligas = "SELECT DISTINCT paginas.pag FROM paginas";
+    $ligas = mysql_query($query_ligas, $ha) or die(mysql_error());
+    $row_ligas = mysql_fetch_assoc($ligas);
+    $totalRows_ligas = mysql_num_rows($ligas);
+                                    ?>
+                                    <?php if($totalRows_subcategorias == 0) { ?> 
+                                    <li><a href="index.php?mod=<?php echo $row_menu['liga_cat']; ?>"><?php echo $row_menu['categoria']; ?></a></li>
+                                    <?php } else { ?>
+                                    <li class="has-sub"><a href="#"><?php echo $row_menu['categoria']; ?></a>
                                         <ul>
-                                            <li class='has-sub texto'><a href='#'>Clientes</a></li>
-                                            <li class='has-sub texto'><a href='#'>Alianzas y convenios</a></li>
-                                            <li class='has-sub texto'><a href='#'>Consultas de interés</a></li>
+                                            <?php do { ?>
+                                            <li class="has-sub"><a href="index.php?mod=<?php echo $row_subcategorias['liga_subcat']; ?>"><?php echo $row_subcategorias['subcat']; ?></a></li>
+                                            <?php } while ($row_subcategorias = mysql_fetch_assoc($subcategorias)); ?>
                                         </ul>
                                     </li>
-                                    <li><a href='#'>Contacto</a></li>
+                                    <?php }?>
+                                    <?php } while ($row_menu = mysql_fetch_assoc($menu)); ?>
                                 </ul>
                             </div>
                         </div>
@@ -82,37 +147,24 @@
                 </div>
 
             </header><!--Aquñi termina header-->
-            
-
-            
-
-
-            
-
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-
-            
-
-            
-
-            
-
+            <!--Contenido-->
+            <!--Banner-->
+            <?php
+            if($_GET['mod']=="inicio") { 
+                mxi_includes_start("banners.php");
+                require(basename("banners.php"));
+                mxi_includes_end();
+            }
+            ?>
+            <?php
+            $incFileName = $mxiObj->getCurrentInclude();
+            if ($incFileName !== null)  {
+                mxi_includes_start($incFileName);
+                require(basename($incFileName)); // require the page content
+                mxi_includes_end();
+            }
+            ?>
+            <!--Fin contenido-->
         </div>
 
         <script>
@@ -150,3 +202,10 @@
 
     </body>
 </html>
+<?php
+mysql_free_result($menu);
+
+mysql_free_result($subcategorias);
+
+mysql_free_result($ligas);
+?>

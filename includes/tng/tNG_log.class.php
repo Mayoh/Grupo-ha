@@ -25,7 +25,7 @@ class tNG_log {
 	 * @param string $message
 	 * @access public
 	 */
-	static function log($className, $methodName=NULL, $message=null) {
+	function log($className, $methodName=NULL, $message=null) {
 		$GLOBALS['KT_logArray'][] = array($className, $methodName, $message);
 	}
 	/**
@@ -33,7 +33,7 @@ class tNG_log {
 	 * @param string $mode if is "text" return the log with html tags striped of
 	 * @access public
 	 */
-	static function getResult($mode, $uniq='') {
+	function getResult($mode, $uniq='') {
 		$ret = '';
 		$alt = '';
 		$ret .= '<ul id="KT_tngtrace_details'.$uniq.'" style="display:none;">';

@@ -1,0 +1,15 @@
+@import "grids";
+@import "normalize";
+@import "galeria";
+
+.contenido {
+  @include container(1024px);
+}
+//Hoteles
+.generales_hotel {
+  width: 100%;
+  float: left;
+}
+#galleria {
+  height: 320px;
+}

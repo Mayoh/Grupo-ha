@@ -57,7 +57,7 @@ function Trigger_Default_Redirect(&$tNG, $page) {
  * @return mix null or error object
  * @access public
  */
-function Trigger_Default_FormValidation(&$tNG, $uniVal) {
+function Trigger_Default_FormValidation(&$tNG, &$uniVal) {
 	$uniVal->setTransaction($tNG);
 	return $uniVal->Execute();
 }

@@ -101,7 +101,7 @@ class tNG_import extends tNG_multiple {
 	 * @access public
 	 */
 	function tNG_import(&$connection) {
-		parent::tNG($connection);
+		parent::tNG_multiple($connection);
 		$this->transactionType = '_import';
 		$this->exportRecordset = false;
 		$this->source = array();

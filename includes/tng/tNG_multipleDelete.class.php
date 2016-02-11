@@ -25,7 +25,7 @@
 		 * @access public
 		 */
 		function tNG_multipleDelete(&$connection) {
-			parent::tNG($connection);
+			parent::tNG_multiple($connection);
 			$this->transactionType = '_multipleDelete';
 		}
 		/**

@@ -27,7 +27,7 @@ class tNG_insert extends tNG_fields {
 	 * @access public
 	 */
 	function tNG_insert(&$connection) {
-		parent::tNG($connection);
+		parent::tNG_fields($connection);
 		$this->transactionType = '_insert';
 		$this->exportRecordset = true;
 		$this->registerTrigger("ERROR", "Trigger_Default_Insert_RollBack", 99);

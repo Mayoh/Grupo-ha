@@ -27,7 +27,7 @@ class tNG_custom extends tNG_fields {
 	 * @access public
 	 */
 	function tNG_custom(&$connection) {
-		parent::tNG($connection);
+		parent::tNG_fields($connection);
 		$this->transactionType = '_custom';
 		$this->setTable("custom");
 		$this->exportRecordset = true;

@@ -1,0 +1,11 @@
+$color-base: #003366;
+$base_claro: lighten($color-base, 60%);
+$base_oscuro: darken($color-base, 20%);
+$base_ultra_claro: lighten($color-base, 76%);
+
+.contenedor {
+  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial;
+}
+.contenido {
+  @include container(1024px);
+}

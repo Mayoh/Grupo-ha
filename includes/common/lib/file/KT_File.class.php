@@ -237,7 +237,7 @@ class KT_file
 		} else {
 			$file = str_replace('\\', '/', $file);
 		}
-		$arr = preg_split('#[\\/]#', $file);
+		$arr = split('[\\/]', $file);
 		array_pop($arr);
 		return implode(DIRECTORY_SEPARATOR, $arr);
 	}

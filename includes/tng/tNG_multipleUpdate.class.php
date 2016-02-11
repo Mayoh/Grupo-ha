@@ -32,7 +32,7 @@
 	 * @access public
 	 */
 		function tNG_multipleUpdate(&$connection) {
-			parent::tNG($connection);
+			parent::tNG_multiple($connection);
 			$this->transactionType = '_multipleUpdate';
 			$this->exportRecordset = true;
 		}

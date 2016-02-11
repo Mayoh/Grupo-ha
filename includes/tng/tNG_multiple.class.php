@@ -155,7 +155,7 @@ class tNG_multiple extends tNG_fields {
 	 * @return string error message
 	 * @access public
 	 */
-	function getFieldError($fName, $cnt = 1) {
+	function getFieldError($fName, $cnt) {
 		if (isset($this->multTNGs[$cnt-1])) {
 			$tmp = $this->multTNGs[$cnt-1]->getError();
 			if (isset($tmp)) {

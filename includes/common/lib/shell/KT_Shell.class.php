@@ -103,7 +103,7 @@ class KT_shell {
 			$this->setError($tmp_e, array(), array($command . ' '. $this->getArguments(), $exit_code, $output));
 			
 			/* safe mode */
-			if (@ini_get("safe_mode")) {
+			if (ini_get("safe_mode")) {
 				$this->setError('PHP_SHELL_ERR_SAFE_MODE', array(), array());
 			}
 			return;

@@ -433,7 +433,7 @@ class tNG_fields extends tNG {
 	 * @return string error message
 	 * @access public
 	 */
-	function getFieldError($fName, $cnt = 1) {
+	function getFieldError($fName) {
 		$tmp = $this->getError();
 		if (isset($tmp)) {
 			return $tmp->getFieldError($fName);

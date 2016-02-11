@@ -26,7 +26,7 @@ class tNG_update extends tNG_fields {
 	 * @access public
 	 */
 	function tNG_update(&$connection) {
-		parent::tNG($connection);
+		parent::tNG_fields($connection);
 		$this->transactionType = '_update';
 		$this->exportRecordset = true;
 		$this->registerTrigger("BEFORE", "Trigger_Default_saveData", -1);

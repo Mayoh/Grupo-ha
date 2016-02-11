@@ -154,7 +154,7 @@ class KT_folder {
 		$path = KT_realpath($path);
 		
 		$arrCreate = array();
-		$arrPath = preg_split("#[\\/]#", $path);
+		$arrPath = split("[\\/]", $path);
 		if ($arrPath[count($arrPath)-1]=='') {
 			array_pop($arrPath);
 		}

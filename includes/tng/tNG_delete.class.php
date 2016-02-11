@@ -27,7 +27,7 @@ class tNG_delete extends tNG_fields {
 	 * @access public
 	 */
 	function tNG_delete(&$connection) {
-		parent::tNG($connection);
+		parent::tNG_fields($connection);
 		$this->transactionType = '_delete';
 		$this->registerTrigger("BEFORE", "Trigger_Default_saveData", -1);
 	}

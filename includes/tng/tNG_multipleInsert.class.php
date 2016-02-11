@@ -39,7 +39,7 @@ class tNG_multipleInsert extends tNG_multiple {
 	 * @access public
 	 */
 	function tNG_multipleInsert(&$connection) {
-		parent::tNG($connection);
+		parent::tNG_multiple($connection);
 		$this->transactionType = '_multipleInsert';
 		$this->setInsertElements("GET","no_new");
 		$this->exportRecordset = true;

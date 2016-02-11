@@ -2030,8 +2030,8 @@ class KT_image {
 		if (strtolower(substr(PHP_OS, 0, 1))=='w') {
 			$path = str_replace('/', '\\', $path);
 		}
-		if (preg_match("/\./ims", $path)) {
-			$arr = preg_split("#[\\/]#", $path);
+		if (preg_match("/\./ims",$path)) {
+			$arr = split("[/\]", $path);
 			array_pop($arr);
 			$path = implode(DIRECTORY_SEPARATOR, $arr);
 		}

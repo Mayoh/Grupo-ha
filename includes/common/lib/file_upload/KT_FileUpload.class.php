@@ -241,7 +241,7 @@ class KT_fileUpload
 				$this->setError('PHP_UPLOAD_MOVE_TMP_ERROR', array(), array());
 				return;
 			} else {
-				$arr = preg_split("#[\\/]#", $destinationName);
+				$arr = split("[\\/]", $destinationName);
 				$this->destinationName = $destinationName;
 				KT_setFilePermissions($this->destinationName);
 				return array_pop($arr);

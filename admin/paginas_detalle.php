@@ -1,4 +1,5 @@
 <?php require_once('../Connections/ha.php'); ?>
+<?php require_once("../webassist/ckeditor/ckeditor.php"); ?>
 <?php
 // Load the common classes
 require_once('../includes/common/KT_common.php');
@@ -213,8 +214,44 @@ do {
           </tr>
           <tr>
             <td class="KT_th"><label for="contenido_<?php echo $cnt1; ?>">Contenido:</label></td>
-            <td><textarea name="contenido_<?php echo $cnt1; ?>" id="contenido_<?php echo $cnt1; ?>" cols="50" rows="5"><?php echo KT_escapeAttribute($row_rspaginas['contenido']); ?></textarea>
-              <?php echo $tNGs->displayFieldHint("contenido");?> <?php echo $tNGs->displayFieldError("paginas", "contenido", $cnt1); ?></td>
+            <td><?php
+// The initial value to be displayed in the editor.
+$CKEditor_initialValue = "".$row_rspaginas['contenido']  ."";
+$CKEditor = new CKEditor();
+$CKEditor->basePath = "../webassist/ckeditor/";
+$CKEditor_config = array();
+$CKEditor_config["wa_preset_name"] = "ha";
+$CKEditor_config["wa_preset_file"] = "ha.xml";
+$CKEditor_config["width"] = "100%";
+$CKEditor_config["height"] = "200px";
+$CKEditor_config["docType"] = "<" ."!" ."DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">";
+$CKEditor_config["dialog_startupFocusTab"] = false;
+$CKEditor_config["fullPage"] = false;
+$CKEditor_config["tabSpaces"] = 4;
+$CKEditor_config["filebrowserBrowseUrl"] = "../webassist/kfm/index.php?uicolor=".urlencode(isset($CKEditor_config["uiColor"])?str_replace("#","#",$CKEditor_config["uiColor"]):"#eee")."&theme=webassist_v2";
+$CKEditor_config["toolbar"] = array(
+array( 'Source','-','Save','NewPage','Preview','-','Templates'),
+array( 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'),
+array( 'Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'),
+array( 'Form','Checkbox','Radio','TextField','Textarea','Select','Button','ImageButton','HiddenField'),
+array( 'BidiLtr','BidiRtl'),
+array( 'Bold','Italic','Underline','Strike','-','Subscript','Superscript'),
+array( 'NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'),
+array( 'JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'),
+array( 'Link','Unlink','Anchor'),
+array( 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'),
+('/'),
+array( 'Styles','Format','Font','FontSize'),
+array( 'TextColor','BGColor'),
+array( 'Maximize','ShowBlocks','-','About'));
+$CKEditor_config["contentsLangDirection"] = "ltr";
+$CKEditor_config["entities"] = false;
+$CKEditor_config["pasteFromWordRemoveFontStyles"] = false;
+$CKEditor_config["pasteFromWordRemoveStyles"] = false;
+$CKEditor_config["contentsCss"] = array("../css/style-grupoha.css");
+$CKEditor->editor("contenido_".$cnt1  ."", $CKEditor_initialValue, $CKEditor_config);
+?>
+<?php echo $tNGs->displayFieldHint("contenido");?> <?php echo $tNGs->displayFieldError("paginas", "contenido", $cnt1); ?></td>
           </tr>
         </table>
         <input type="hidden" name="kt_pk_paginas_<?php echo $cnt1; ?>" class="id_field" value="<?php echo KT_escapeAttribute($row_rspaginas['kt_pk_paginas']); ?>" />

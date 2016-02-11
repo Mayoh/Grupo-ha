@@ -93,8 +93,9 @@ $totalRows_menu = mysql_num_rows($menu);
                                 </ul>
 
                                 <form action="" id="searchbox">
-                                    <input id="search" type="text" placeholder="Buscar">
-                                    <input id="submit" type="submit" value="">
+                                    <input id="search" type="text" placeholder="Buscar" name="search">
+                                    <input type="hidden" name="mod" value="busca">
+                                    <input id="submit" type="submit" method="get" action="index.php">
                                 </form>
                             </div>
                         </div>

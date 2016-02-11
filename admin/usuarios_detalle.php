@@ -15,6 +15,12 @@ $tNGs = new tNG_dispatcher("../");
 // Make unified connection variable
 $conn_ha = new KT_connection($ha, $database_ha);
 
+//Start Restrict Access To Page
+$restrict = new tNG_RestrictAccess($conn_ha, "../");
+//Grand Levels: Any
+$restrict->Execute();
+//End Restrict Access To Page
+
 //start Trigger_CheckPasswords trigger
 //remove this line if you want to edit the code by hand
 function Trigger_CheckPasswords(&$tNG) {

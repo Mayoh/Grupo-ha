@@ -12,6 +12,12 @@ $tNGs = new tNG_dispatcher("../");
 // Make unified connection variable
 $conn_ha = new KT_connection($ha, $database_ha);
 
+//Start Restrict Access To Page
+$restrict = new tNG_RestrictAccess($conn_ha, "../");
+//Grand Levels: Any
+$restrict->Execute();
+//End Restrict Access To Page
+
 // Make a logout transaction instance
 $logoutTransaction = new tNG_logoutTransaction($conn_ha);
 $tNGs->addTransaction($logoutTransaction);

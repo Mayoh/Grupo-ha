@@ -3,6 +3,9 @@
 // Load the common classes
 require_once('../includes/common/KT_common.php');
 
+// Load the tNG classes
+require_once('../includes/tng/tNG.inc.php');
+
 // Load the required classes
 require_once('../includes/tfi/TFI.php');
 require_once('../includes/tso/TSO.php');
@@ -10,6 +13,12 @@ require_once('../includes/nav/NAV.php');
 
 // Make unified connection variable
 $conn_ha = new KT_connection($ha, $database_ha);
+
+//Start Restrict Access To Page
+$restrict = new tNG_RestrictAccess($conn_ha, "../");
+//Grand Levels: Any
+$restrict->Execute();
+//End Restrict Access To Page
 
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 

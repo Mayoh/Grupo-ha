@@ -1,6 +1,18 @@
-<?php
+<?php require_once('../Connections/ha.php'); ?><?php
 // Require the MXI classes
 require_once ('../includes/mxi/MXI.php');
+
+// Load the tNG classes
+require_once('../includes/tng/tNG.inc.php');
+
+// Make unified connection variable
+$conn_ha = new KT_connection($ha, $database_ha);
+
+//Start Restrict Access To Page
+$restrict = new tNG_RestrictAccess($conn_ha, "../");
+//Grand Levels: Any
+$restrict->Execute();
+//End Restrict Access To Page
 
 // Include Multiple Static Pages
 $mxiObj = new MXI_Includes("mod");

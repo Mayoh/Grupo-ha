@@ -53,6 +53,9 @@ $totalRows_menu = mysql_num_rows($menu);
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php if($_GET[mod]=='') {?>
+        <meta http-equiv="refresh" content="0;URL=index.php?mod=inicio">
+        <?php } ?>
         <title>Grupo Ha´</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">

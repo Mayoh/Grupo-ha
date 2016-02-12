@@ -45,7 +45,7 @@ function Trigger_ImageUpload(&$tNG) {
   $uploadObj = new tNG_ImageUpload($tNG);
   $uploadObj->setFormFieldName("imagen");
   $uploadObj->setDbFieldName("imagen");
-  $uploadObj->setFolder("../imgs/servicios/");
+  $uploadObj->setFolder("../imgs/");
   $uploadObj->setMaxSize(1500);
   $uploadObj->setAllowedExtensions("gif, jpg, jpe, jpeg, png");
   $uploadObj->setRename("auto");

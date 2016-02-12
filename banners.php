@@ -54,7 +54,9 @@ $totalRows_banners = mysql_num_rows($banners);
             <div id="ninja-slider">
                 <div class="slider-inner">
                     <ul>
+                        <?php do { ?>
                         <li><img class="ns-img" src="imgs/<?php echo $row_banners['banner']; ?>" /></li>
+                          <?php } while ($row_banners = mysql_fetch_assoc($banners)); ?>
                     </ul>
                 </div>
             </div>

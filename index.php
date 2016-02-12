@@ -170,7 +170,9 @@ $totalRows_menu = mysql_num_rows($menu);
             ?>
             <!--Fin contenido-->
         </div>
-
+  		<?php
+			include('footer.php');
+		?>
         <script>
             //  The function to change the class
             var changeClass = function (r,className1,className2) {

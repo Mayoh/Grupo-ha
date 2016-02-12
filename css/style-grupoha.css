@@ -1025,11 +1025,16 @@ a, button {
 
 .servicio-abstract {
 	  background: rgba(23,18,67,.6);
-	  background-origin: border-box;
+	  //background-origin: border-box;
 	  position: absolute;
 	  bottom: 0;
 	  left: 0;
-	  color:#fff !important;}
+	  color:#fff !important;
+	  width:100%;}
+	  
+.servicio-abstract a {
+		color:white!important;
+	}
 	
 .titulo-servicio {
 	font-size:1.6em;
@@ -1042,12 +1047,13 @@ a, button {
 	  padding: 15px;
 	  margin:0;}
 
-.servicio-abstract :hover {
-	  background:rgba(255,255,255,.6);
-	  background-origin: border-box;
-	  height:100%;
+.servicio-abstract:hover {
+	  background-color: rgba(255,255,255,.6);
 	  color: #000066 !important;
 	  }
+.servicio-abstract:hover a {
+	color:#000066 !important;
+}
 .titulo-servicio :hover { background:none !important;}
 
 /*asociados*/

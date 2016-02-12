@@ -25,7 +25,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="col-md-6 text-right aviso"><p>Grupo Ha’ 2016<br/>Derechos Reservados<br/><a id="aviso-privacidad" href="#">Aviso de privacidad</a></p></div>
+                    <div class="col-md-6 text-right aviso"><p>Grupo Ha’ 2016<br/>Derechos Reservados<br/><a id="aviso-privacidad" href="http://hagrupo.com/sistema/imgs/politicas-privacidad.pdf">Aviso de privacidad</a></p></div>
                     <div class="col-md-6"><p class="text-left">(55) 5606 5167</p>
                         <ul id= "iconos2">
                             <li id="facebook"><a href="https://www.facebook.com/grupoha.stillman" title="Síguenos en Facebook"></a></li>

@@ -1,6 +1,6 @@
 <footer class="row grupoha-footer"><!--Aquí inicia footer--> 
-                <div class="col-md-1"></div>
-                <div class="col-md-10 bloques footer">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 bloques footer">
                     <nav id="menu" class="nav">					
                         <ul>
                             <li>
@@ -15,7 +15,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span>Enlaces comerciales</span>
+                                    <span>Clientes</span>
                                 </a>
                             </li>
                             <li>
@@ -33,5 +33,5 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-1"></div>
+                <div class="col-md-2"></div>
             </footer><!--Aquí termina footer-->

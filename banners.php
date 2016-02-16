@@ -51,14 +51,14 @@ $totalRows_banners = mysql_num_rows($banners);
     <div class="col-md-10 bloques">
 
         <div class="col-md-12">
-            <div id="ninja-slider">
-                <div class="slider-inner">
-                    <ul>
+            <div class="blueberry">
+                
+                    <ul class="slides">
                         <?php do { ?>
                         <li><img class="ns-img" src="imgs/<?php echo $row_banners['banner']; ?>" /></li>
                           <?php } while ($row_banners = mysql_fetch_assoc($banners)); ?>
                     </ul>
-                </div>
+                
             </div>
         </div>
 

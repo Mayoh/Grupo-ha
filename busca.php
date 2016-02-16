@@ -31,12 +31,10 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 
-$colname_search = "-1";
-if (isset($_GET['busca'])) {
-  $colname_search = $_GET['busca'];
-}
+$busca=$_GET['search'];
+
 mysql_select_db($database_ha, $ha);
-$query_search = sprintf("SELECT * FROM paginas WHERE contenido LIKE %s", GetSQLValueString("%" . $colname_search . "%", "text"));
+$query_search = "SELECT paginas.pag, CONCAT_WS(' ', TRIM(SUBSTRING_INDEX(SUBSTRING(paginas.contenido, 1, INSTR(paginas.contenido, '$busca') - 1 ),' ', -50)),'<span id=\"destacadoBusca\">','$busca','</span>', TRIM(SUBSTRING_INDEX(SUBSTRING(paginas.contenido, INSTR(paginas.contenido, '$busca') + LENGTH('$busca') ),' ',50))) AS contenido FROM paginas WHERE paginas.contenido LIKE '%$busca%'";
 $search = mysql_query($query_search, $ha) or die(mysql_error());
 $row_search = mysql_fetch_assoc($search);
 $totalRows_search = mysql_num_rows($search);
@@ -54,9 +52,12 @@ $totalRows_search = mysql_num_rows($search);
     <div class="col-md-10 bloques">
     	<div class="col-md-12">
         	<h2 class="titulos-ha">Resultados</h2>
+            <div class="resultados"><?php do { ?>
             <div class="resultado">
-            	<a href="inex.php?mod=<?php echo $row_search['pag']; ?>"><?php echo $row_search['contenido']; ?></a>
-            </div>
+                <?php $contenido=$row_search['contenido'];?>
+                <a href="index.php?mod=<?php echo $row_search['pag']; ?>"><?php echo strip_tags($contenido, '<span>'); ?>...</a>
+              </div>
+              <?php } while ($row_search = mysql_fetch_assoc($search)); ?></div>
         </div>
         <!--Fin contenido-->
     </div>

@@ -64,14 +64,16 @@ $totalRows_menu = mysql_num_rows($menu);
         <meta name="description" content="Ofrece un portafolio de servicios especializados en temas del agua para tomar mejores decisiones, basadas en el conocimiento científico para enfrentar la problemática actual del agua en nuestro país." />
         <meta name="keywords" content="grupoha, agua, servicios especializados en agua, conocimientos científicos, grupo especialistas,modelo de geobases," />
         <meta name="author" content="Plastik 2016" />
-        <link type="text/css" rel="stylesheet" href="css/style-grupoha.css"/>
         <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+        <link type="text/css" rel="stylesheet" href="css/style-grupoha.css"/>
         <link href='https://fonts.googleapis.com/css?family=Federo' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Cambay:400,700' rel='stylesheet' type='text/css'>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="js/script.js"></script>
         <script src="js/modernizr.custom.js"></script>
-        <script src="js/ninja-slider.js"></script>
+        <script src="js/jquery.blueberry.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/messages_es.js"></script>
         <base href="<?php echo mxi_getBaseURL(); ?>" />
     </head>
 
@@ -204,6 +206,12 @@ $totalRows_menu = mysql_num_rows($menu);
                     changeClass(mobileButton, 'navtoogle active', 'navtoogle');
                 }
             }
+			// Slider
+			$(window).load(function() {
+			  	$('.blueberry').blueberry();
+			  });
+			//Validator
+			$("#contactForm").validate();
         </script>
 
     </body>

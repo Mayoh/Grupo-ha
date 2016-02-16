@@ -18,7 +18,7 @@ if (("" == ""))     {
   // build up recipients array
   $CurIndex = sizeof($RecipArray);
   $RecipArray[$CurIndex] = array();
-  $RecipArray[$CurIndex ][] = "mmendezcads@mac.com";
+  $RecipArray[$CurIndex ][] = "atencionaclientes@hagrupo.com";
   $TotalEmails += sizeof($RecipArray[$CurIndex]);
   $RealWait = ($WaitTime<0.25)?0.25:($WaitTime+0.1);
   $TimeTracker = Array();

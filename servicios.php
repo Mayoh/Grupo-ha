@@ -52,12 +52,14 @@ $totalRows_Servicios = mysql_num_rows($Servicios);
                     <?php do { ?>
                     <div class="col-md-4">
                         <center>
+                        <a href="index.php?mod=<?php echo $row_Servicios['pag_serv']; ?>">
                           <div class="servicios">
                             <img src="imgs/<?php echo $row_Servicios['imagen']; ?>" alt="<?php echo $row_Servicios['servicio']; ?>">
                             <div class="servicio-abstract">
-                              <p class="abstract"><a href="index.php?mod=<?php echo $row_Servicios['pag_serv']; ?>"><span class="titulo-servicio"><?php echo $row_Servicios['servicio']; ?></span></a><br/><br/><?php echo $row_Servicios['desc_serv']; ?></p>
+                              <p class="abstract"><span class="titulo-servicio"><?php echo $row_Servicios['servicio']; ?></span><br/><br/><?php echo $row_Servicios['desc_serv']; ?></p>
                               </div>
                             </div>
+                            </a>
                           </center>
                       </div>
                       <?php } while ($row_Servicios = mysql_fetch_assoc($Servicios)); ?>

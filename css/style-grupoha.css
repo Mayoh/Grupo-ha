@@ -1042,6 +1042,12 @@ background-position: -24px -24px;
 
 .pager li > a, .pager li > span {border:none;}
 
+.pager li > a:hover, .pager li > a:focus {background-color:transparent;}
+
+.carrusel {
+		padding:0!important;
+}
+
 /*Buscador*/
 #destacadoBusca {background-color:#FF6;}
 .resultado {

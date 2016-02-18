@@ -53,7 +53,7 @@ $totalRows_banners = mysql_num_rows($banners);
         <div class="col-md-12">
             <div class="blueberry">
                 
-                    <ul class="slides">
+                    <ul class="slides carrusel">
                         <?php do { ?>
                         <li><img class="ns-img" src="imgs/<?php echo $row_banners['banner']; ?>" /></li>
                           <?php } while ($row_banners = mysql_fetch_assoc($banners)); ?>

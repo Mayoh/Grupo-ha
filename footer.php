@@ -4,22 +4,22 @@
                     <nav id="menu" class="nav">					
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="index.php?mod=inicio">
                                     <span>Inicio</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="index.php?mod=servicios">
                                     <span>Servicios</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="index.php?mod=clientes">
                                     <span>Clientes</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="index.php?mod=contacto">
                                     <span>Contacto</span>
                                 </a>
                             </li>

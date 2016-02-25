@@ -376,8 +376,8 @@ z-index:200;
   }
   #cssmenu ul ul li a {
     padding: 20px 20px 20px 30px;
-    font-size: 12px;
-    color: #171243;
+    font-size: 13px;
+    color: #171243 !important;
     background: none;
   }
   #cssmenu ul ul li:hover > a,
